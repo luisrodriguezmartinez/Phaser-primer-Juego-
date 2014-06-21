@@ -37,6 +37,7 @@ function preload() {
 
 function create() {
 
+    this.game.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 
 
     /**Creamos la nieve**/
@@ -115,20 +116,20 @@ function create() {
     game.time.events.loop(Phaser.Timer.SECOND, updateCounter, this);
 
     /**Para el puntaje**/
-    textpuntos = game.add.text(innerWidth-100, 40, "Puntaje : 00", {
-        font: "24px Arial",
+    textpuntos = game.add.text(innerWidth/2 + innerWidth /2,innerHeight/2 - innerHeight/2 , "Puntaje : 00", {
+        font: "14px Arial",
         fill: "#ffffff",
         align: "center"
     });
-    textpuntos.anchor.setTo(0.5, 0.5);
+    textpuntos.anchor.setTo(1.2, -2);
 
     /**Para las vidas**/
-    textvidas = game.add.text(70, 40, "Vidas : 20", {
-        font: "24px Arial",
+    textvidas = game.add.text(innerWidth/2 - innerWidth/2 , innerHeight/2 - innerHeight/2, "Vidas : 20", {
+        font: "14px Arial",
         fill: "#ffffff",
         align: "center"
     });
-    textvidas.anchor.setTo(0.5, 0.5);
+    textvidas.anchor.setTo(-0.2,-2);
 }
 
 function render() {
